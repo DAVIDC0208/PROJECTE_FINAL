@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="ca">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <style>
       *,
       *::before,
@@ -20,19 +21,20 @@
       }
 
       :root {
-        --bg: #38040E;
+        --bg: #29050c;
         --bg2: #250902;
-        --surface: #640D14;
+        --surface: #640d14;
         --border: rgba(255, 255, 255, 0.07);
         --text: #f0ede8;
         --muted: #888480;
-        --accent: rgba(255, 30,0);
+        --accent: rgba(255, 30, 0);
         --accent2: #3b6e8c;
         --radius: 12px;
         --max: 1100px;
         --serif: "DM Serif Display", Georgia, serif;
         --sans: "DM Sans", system-ui, sans-serif;
       }
+      /* paleta de colores */
 
       html {
         scroll-behavior: smooth;
@@ -736,51 +738,53 @@
     <nav id="navbar">
       <a href="#hero" class="nav-logo">St. Homes</a>
       <ul class="nav-links">
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#testimonios">Clientes</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#servicios">Serveis</a></li>
+        <li><a href="#nosotros">Historia</a></li>
+        <li><a href="#contacto">Contacte</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="#contacto" class="btn btn-primary">Consultar Becas</a>
+        <a href="#contacto" class="btn btn-primary">Consultar Beques</a>
       </div>
+
       <button class="hamburger" id="hamburger" aria-label="Menú">
         <span></span><span></span><span></span>
       </button>
     </nav>
 
-    <!-- ═══════════════════════ HERO ═══════════════════════ -->
+    <!-- main -->
     <section id="hero">
       <div class="hero-bg"></div>
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
             <div class="hero-eyebrow reveal">
-              <span class="tag">✦ T'ajudem a trobar el pis que tant necessites</span>
+              <span class="tag"
+                >T'ajudem a trobar el pis que tant necessites</span
+              >
             </div>
             <h1 class="hero-title reveal reveal-delay-1">
-              Título<br />principal <em>que</em><br />impacta
+              St. Homes<br />Pisos <em>per</em><br />Estudiants
             </h1>
             <p class="hero-desc reveal reveal-delay-2">
-              Descripción breve de lo que ofreces y por qué alguien debería
-              elegirte. Máximo 2–3 líneas. Clara, directa y orientada al valor.
+              A St. Homes t'ajudem a trobar els millors pisos per hostatjar-te
+              durant el teu curs.
             </p>
             <div class="hero-actions reveal reveal-delay-3">
-              <a href="#contacto" class="btn btn-primary">Empezar ahora</a>
-              <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+              <a href="#contacto" class="btn btn-primary">Començar ara</a>
+              <a href="#servicios" class="btn btn-outline">Veure serveis</a>
             </div>
             <div class="hero-stats reveal reveal-delay-3">
               <div>
                 <span class="stat-num">+200</span>
-                <span class="stat-label">Clientes satisfechos</span>
+                <span class="stat-label">Clients satisfets</span>
               </div>
               <div>
-                <span class="stat-num">8 años</span>
-                <span class="stat-label">De experiencia</span>
+                <span class="stat-num">8 anys</span>
+                <span class="stat-label">D'experiència</span>
               </div>
               <div>
                 <span class="stat-num">98%</span>
-                <span class="stat-label">Tasa de retención</span>
+                <span class="stat-label">Taxa de retenció</span>
               </div>
             </div>
           </div>
@@ -791,21 +795,12 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════ LOGOS ═══════════════════════ -->
+    <!-- barra de separación -->
     <div id="logos">
-      <div class="container">
-        <p class="logos-label">Confían en nosotros</p>
-        <div class="logos-track">
-          <div class="logo-placeholder"></div>
-          <div class="logo-placeholder"></div>
-          <div class="logo-placeholder"></div>
-          <div class="logo-placeholder"></div>
-          <div class="logo-placeholder"></div>
-        </div>
-      </div>
+      <div class="container"></div>
     </div>
 
-    <!-- ═══════════════════════ SERVICIOS ═══════════════════════ -->
+    <!-- Servicios -->
     <section id="servicios">
       <div class="container">
         <div class="section-head reveal">
@@ -868,7 +863,12 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════ NOSOTROS ═══════════════════════ -->
+    <!-- barra de separación -->
+    <div id="logos">
+      <div class="container"></div>
+    </div>
+
+    <!-- Historia -->
     <section id="nosotros">
       <div class="container">
         <div class="about-grid">
@@ -876,8 +876,8 @@
             <span>Tu foto o ilustración</span>
           </div>
           <div class="about-content">
-            <span class="tag reveal">Quiénes somos</span>
-            <h2 class="reveal">Tu historia<br />en pocas<br />palabras</h2>
+            <span class="tag reveal">Qui som</span>
+            <h2 class="reveal">La nosta<br />historia<br />palabras</h2>
             <p class="reveal">
               Párrafo introductorio sobre tu empresa o proyecto. Quién eres,
               desde cuándo, y cuál es tu misión.
@@ -893,110 +893,37 @@
               <li>Punto clave cuatro de tu propuesta de valor</li>
             </ul>
             <a href="#contacto" class="btn btn-primary reveal"
-              >Conocernos mejor</a
+              >Contacta'ns</a
             >
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════ TESTIMONIOS ═══════════════════════ -->
-    <section id="testimonios">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="tag">Testimonios</span>
-          <h2>Lo que dicen<br />nuestros clientes</h2>
-        </div>
-        <div class="testimonios-grid">
-          <div class="testimonio-card reveal">
-            <div class="stars">★★★★★</div>
-            <p class="testimonio-text">
-              "Escribe aquí el testimonio real de tu cliente. Cuanto más
-              específico y auténtico, mejor. Que hable de resultados concretos."
-            </p>
-            <div class="testimonio-author">
-              <div class="author-avatar">AB</div>
-              <div>
-                <p class="author-name">Nombre Apellido</p>
-                <p class="author-role">Cargo · Empresa</p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonio-card reveal reveal-delay-1">
-            <div class="stars">★★★★★</div>
-            <p class="testimonio-text">
-              "Otro testimonio de cliente satisfecho. Intenta que reflejen
-              diferentes aspectos de tu servicio o diferentes perfiles de
-              cliente."
-            </p>
-            <div class="testimonio-author">
-              <div class="author-avatar">CD</div>
-              <div>
-                <p class="author-name">Nombre Apellido</p>
-                <p class="author-role">Cargo · Empresa</p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonio-card reveal reveal-delay-2">
-            <div class="stars">★★★★★</div>
-            <p class="testimonio-text">
-              "Un tercer testimonio que complete la visión. Puedes añadir o
-              quitar tarjetas según cuántos tengas."
-            </p>
-            <div class="testimonio-author">
-              <div class="author-avatar">EF</div>
-              <div>
-                <p class="author-name">Nombre Apellido</p>
-                <p class="author-role">Cargo · Empresa</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- barra de separación -->
+    <div id="logos">
+      <div class="container"></div>
+    </div>
 
-    <!-- ═══════════════════════ CTA ═══════════════════════ -->
-    <section id="cta">
-      <div class="container">
-        <span class="tag reveal">Próximo paso</span>
-        <h2 class="reveal">¿Listo para<br /><em>empezar</em>?</h2>
-        <p class="reveal">
-          Una llamada a la acción clara y directa. Dile al visitante exactamente
-          qué va a obtener al contactarte.
-        </p>
-        <div class="cta-actions reveal">
-          <a href="#contacto" class="btn btn-primary">Hablar con nosotros</a>
-          <a href="tel:+34000000000" class="btn btn-outline">Llamar ahora</a>
-        </div>
-        <p class="cta-note reveal muted">
-          Sin compromiso · Respuesta en menos de 24h
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════ CONTACTO ═══════════════════════ -->
+    <!-- contacto -->
     <section id="contacto">
       <div class="container">
         <div class="contact-grid">
           <div class="contact-info">
-            <span class="tag reveal">Contacto</span>
-            <h2 class="reveal">Hablemos<br />de tu proyecto</h2>
-            <p class="reveal">
-              Rellena el formulario o contáctanos directamente. Te respondemos
-              en menos de 24 horas.
-            </p>
+            <span class="tag reveal">Contacte</span>
+            <h2 class="reveal">Contacta'ns
             <div class="contact-items reveal">
               <div class="contact-item">
                 <div class="contact-item-icon">✉</div>
-                <span>hola@tuempresa.com</span>
+                <span>StHomes.com</span>
               </div>
               <div class="contact-item">
                 <div class="contact-item-icon">☎</div>
-                <span>+34 000 000 000</span>
+                <span>+34 636 140 204</span>
               </div>
               <div class="contact-item">
                 <div class="contact-item-icon">⌖</div>
-                <span>Tu ciudad, País</span>
+                <span>Barcelona, Espanya</span>
               </div>
             </div>
           </div>
@@ -1004,8 +931,8 @@
             <div class="contact-form" id="contactForm">
               <div class="form-row">
                 <div class="form-group">
-                  <label for="nombre">Nombre</label>
-                  <input type="text" id="nombre" placeholder="Tu nombre" />
+                  <label for="nombre">Nom</label>
+                  <input type="text" id="nombre" placeholder="El teu nom aquí" />
                 </div>
                 <div class="form-group">
                   <label for="email">Email</label>
@@ -1013,20 +940,20 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="asunto">Asunto</label>
+                <label for="asunto">Assumpte</label>
                 <select id="asunto">
                   <option value="">Selecciona un tema…</option>
                   <option>Consulta general</option>
-                  <option>Presupuesto</option>
-                  <option>Soporte</option>
-                  <option>Otro</option>
+                  <option>Pressupost</option>
+                  <option>Suport</option>
+                  <option>Altre</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="mensaje">Mensaje</label>
+                <label for="mensaje">Missatge</label>
                 <textarea
                   id="mensaje"
-                  placeholder="Cuéntanos tu proyecto o consulta…"
+                  placeholder="Explica'ns sobre els teus dubtes sobre els nostres serveis o consulta…"
                 ></textarea>
               </div>
               <div class="form-submit">
@@ -1036,7 +963,7 @@
                   onclick="enviarFormulario()"
                   style="width: 100%"
                 >
-                  Enviar mensaje
+                  Enviar missatge
                 </button>
               </div>
             </div>
@@ -1048,7 +975,7 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+    <!-- footer -->
     <footer>
       <div class="container">
         <div class="footer-grid">
@@ -1095,7 +1022,7 @@
       </div>
     </footer>
 
-    <!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
+    <!-- Javascript -->
     <script>
       // Navbar scroll
       const navbar = document.getElementById("navbar");
