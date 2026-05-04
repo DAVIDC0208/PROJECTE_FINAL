@@ -20,43 +20,40 @@
       }
 
       :root {
-        --bg: #201b1c;
-        --bg2: #250902;
-        --surface: #640d14;
-        --border: rgba(255, 255, 255, 0.07);
+        --fons: #201b1c;
+        --fons2: #250902;
+        --superficie: #640d14;
+        --vora: rgba(255, 255, 255, 0.07);
         --text: #f0ede8;
-        --muted: #888480;
+        --apagat: #888480;
         --accent: rgba(255, 30, 0);
         --accent2: #3b6e8c;
-        --radius: 12px;
+        --radi: 12px;
         --max: 1100px;
-        --serif: "DM Serif Display", Georgia, serif;
+        --serifa: "DM Serif Display", Georgia, serif;
         --sans: "DM Sans", system-ui, sans-serif;
       }
-      /* paleta de colores */
 
       html {
         scroll-behavior: smooth;
       }
-      /* scroll suave */
 
       body {
         font-family: var(--sans);
-        background: var(--bg);
+        background: var(--fons);
         color: var(--text);
         font-size: 16px;
         line-height: 1.7;
         overflow-x: hidden;
       }
 
-      /* utilidades */
-      .container {
+      .contenidor {
         max-width: var(--max);
         margin: 0 auto;
         padding: 0 2rem;
       }
-      /* contenedor */
-      .tag {
+
+      .etiqueta {
         display: inline-block;
         font-size: 11px;
         font-weight: 500;
@@ -69,47 +66,49 @@
         border-radius: 20px;
         margin-bottom: 1rem;
       }
-      .btn {
+
+      .boto {
         display: inline-block;
         font-family: var(--sans);
         font-size: 14px;
         font-weight: 500;
         padding: 12px 28px;
-        border-radius: var(--radius);
+        border-radius: var(--radi);
         cursor: pointer;
         transition: all 0.2s;
         text-decoration: none;
         border: none;
       }
-      /* boton */
-      .btn-primary {
+
+      .boto-primari {
         background: var(--accent);
         color: #0e0e0f;
       }
-      /* boton primario */
-      .btn-primary:hover {
+
+      .boto-primari:hover {
         background: #dfc080;
         transform: translateY(-1px);
       }
-      .btn-outline {
+
+      .boto-contorn {
         background: transparent;
         color: var(--text);
-        border: 1px solid var(--border);
+        border: 1px solid var(--vora);
       }
-      /* borde boton */
-      .btn-outline:hover {
+
+      .boto-contorn:hover {
         border-color: rgba(255, 255, 255, 0.25);
-        background: var(--surface);
+        background: var(--superficie);
       }
-      /* hover del borde del boton */
 
       section {
         padding: 6rem 0;
       }
+
       h1,
       h2,
       h3 {
-        font-family: var(--serif);
+        font-family: var(--serifa);
         font-weight: 400;
         line-height: 1.15;
       }
@@ -123,7 +122,7 @@
         font-size: 1.4rem;
       }
       p {
-        color: var(--muted);
+        color: var(--apagat);
       }
 
       /* ─── NAVBAR ─── */
@@ -142,49 +141,40 @@
         border-bottom: 1px solid transparent;
         transition: border-color 0.3s;
       }
-      nav.scrolled {
-        border-color: var(--border);
+
+      nav.desplacat {
+        border-color: var(--vora);
       }
+
       .nav-logo {
-        font-family: var(--serif);
+        font-family: var(--serifa);
         font-size: 1.5rem;
         color: var(--text);
         text-decoration: none;
       }
-      .nav-links {
+
+      .nav-enllacos {
         display: flex;
         gap: 2rem;
         list-style: none;
       }
-      .nav-links a {
-        color: var(--muted);
+
+      .nav-enllacos a {
+        color: var(--apagat);
         text-decoration: none;
         font-size: 14px;
         font-weight: 500;
         transition: color 0.2s;
       }
-      .nav-links a:hover {
+
+      .nav-enllacos a:hover {
         color: var(--text);
       }
-      .nav-cta {
+
+      .nav-accio {
         display: flex;
         gap: 0.75rem;
         align-items: center;
-      }
-      .hamburger {
-        display: none;
-        background: none;
-        border: none;
-        cursor: pointer;
-        flex-direction: column;
-        gap: 5px;
-      }
-      .hamburger span {
-        display: block;
-        width: 22px;
-        height: 1.5px;
-        background: var(--text);
-        transition: all 0.3s;
       }
 
       /* ─── HERO ─── */
@@ -196,7 +186,8 @@
         position: relative;
         overflow: hidden;
       }
-      .hero-bg {
+
+      .hero-fons {
         position: absolute;
         inset: 0;
         pointer-events: none;
@@ -212,47 +203,55 @@
             transparent 60%
           );
       }
-      .hero-grid {
+
+      .hero-quadricula {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
         align-items: center;
         position: relative;
       }
-      .hero-eyebrow {
+
+      .hero-cella {
         margin-bottom: 1.5rem;
       }
-      .hero-title {
+
+      .hero-titol {
         margin-bottom: 1.5rem;
       }
-      .hero-title em {
+
+      .hero-titol em {
         font-style: italic;
         color: var(--accent);
       }
-      .hero-desc {
+
+      .hero-descripcio {
         font-size: 1.1rem;
         margin-bottom: 2.5rem;
         max-width: 500px;
       }
-      .hero-actions {
+
+      .hero-accions {
         display: flex;
         gap: 1rem;
         flex-wrap: wrap;
       }
-      .hero-image {
+
+      .hero-imatge {
         aspect-ratio: 3/4;
-        background: var(--surface);
+        background: var(--superficie);
         border-radius: 20px;
-        border: 1px solid var(--border);
+        border: 1px solid var(--vora);
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--muted);
+        color: var(--apagat);
         font-size: 14px;
         position: relative;
         overflow: hidden;
       }
-      .hero-image::before {
+
+      .hero-imatge::before {
         content: "";
         position: absolute;
         inset: 0;
@@ -263,81 +262,68 @@
           rgba(200, 169, 110, 0.06) 100%
         );
       }
-      .hero-stats {
+
+      .hero-estadistiques {
         display: flex;
         gap: 2rem;
         margin-top: 3rem;
         padding-top: 2rem;
-        border-top: 1px solid var(--border);
+        border-top: 1px solid var(--vora);
       }
-      .stat-num {
-        font-family: var(--serif);
+
+      .estadistica-num {
+        font-family: var(--serifa);
         font-size: 2rem;
         color: var(--text);
         display: block;
       }
-      .stat-label {
+
+      .estadistica-etiqueta {
         font-size: 13px;
-        color: var(--muted);
+        color: var(--apagat);
       }
 
-      /* ─── LOGOS / CLIENTES ─── */
+      /* ─── LOGOS ─── */
       #logos {
         padding: 3rem 0;
-        border-top: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
-      }
-      .logos-label {
-        text-align: center;
-        font-size: 13px;
-        color: var(--muted);
-        margin-bottom: 2rem;
-        letter-spacing: 0.05em;
-      }
-      .logos-track {
-        display: flex;
-        gap: 3rem;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .logo-placeholder {
-        height: 28px;
-        width: 100px;
-        background: var(--border);
-        border-radius: 4px;
-        opacity: 0.5;
+        border-top: 1px solid var(--vora);
+        border-bottom: 1px solid var(--vora);
       }
 
-      /* ─── SERVICIOS / FEATURES ─── */
-      #servicios .section-head {
+      /* ─── SERVEIS ─── */
+      #servicios .cap-seccio {
         text-align: center;
         margin-bottom: 4rem;
       }
-      .section-head p {
+
+      .cap-seccio p {
         max-width: 540px;
         margin: 0.75rem auto 0;
         font-size: 1.05rem;
       }
-      .features-grid {
+
+      .quadricula-funcions {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1.5rem;
       }
-      .feature-card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
+
+      .targeta-funcio {
+        background: var(--superficie);
+        border: 1px solid var(--vora);
+        border-radius: var(--radi);
         padding: 2rem;
         transition:
           border-color 0.2s,
           transform 0.2s;
       }
-      .feature-card:hover {
+
+      .targeta-funcio:hover {
         border-color: rgba(200, 169, 110, 0.3);
         transform: translateY(-3px);
       }
-      .feature-icon {
+
+      .icona-funcio {
         width: 48px;
         height: 48px;
         background: rgba(200, 169, 110, 0.12);
@@ -348,209 +334,136 @@
         margin-bottom: 1.25rem;
         font-size: 22px;
       }
-      .feature-card h3 {
+
+      .targeta-funcio h3 {
         color: var(--text);
         margin-bottom: 0.5rem;
         font-size: 1.15rem;
       }
-      .feature-card p {
+
+      .targeta-funcio p {
         font-size: 0.95rem;
       }
 
-      /* ─── ABOUT / NOSOTROS ─── */
-      #nosotros .about-grid {
+      /* ─── NOSALTRES ─── */
+      #nosotros .quadricula-nosaltres {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 5rem;
         align-items: center;
       }
-      .about-image {
+
+      .imatge-nosaltres {
         aspect-ratio: 3/4;
-        background: var(--surface);
+        background: var(--superficie);
         border-radius: 20px;
-        border: 1px solid var(--border);
+        border: 1px solid var(--vora);
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--muted);
+        color: var(--apagat);
         font-size: 14px;
       }
-      .about-content h2 {
+
+      .contingut-nosaltres h2 {
         margin-bottom: 1.25rem;
       }
-      .about-content p {
+      .contingut-nosaltres p {
         margin-bottom: 1.25rem;
       }
-      .about-list {
+
+      .llista-nosaltres {
         list-style: none;
         margin: 1.5rem 0 2rem;
       }
-      .about-list li {
+
+      .llista-nosaltres li {
         padding: 0.6rem 0;
-        border-bottom: 1px solid var(--border);
+        border-bottom: 1px solid var(--vora);
         font-size: 14px;
-        color: var(--muted);
+        color: var(--apagat);
         display: flex;
         align-items: center;
         gap: 0.75rem;
       }
-      .about-list li::before {
+
+      .llista-nosaltres li::before {
         content: "→";
         color: var(--accent);
         flex-shrink: 0;
       }
 
-      /* ─── TESTIMONIOS ─── */
-      #testimonios {
-        background: var(--bg2);
-      }
-      #testimonios .section-head {
-        text-align: center;
-        margin-bottom: 4rem;
-      }
-      .testimonios-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1.5rem;
-      }
-      .testimonio-card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        padding: 2rem;
-      }
-      .stars {
-        color: var(--accent);
-        font-size: 13px;
-        margin-bottom: 1rem;
-        letter-spacing: 2px;
-      }
-      .testimonio-text {
-        font-style: italic;
-        color: var(--text);
-        margin-bottom: 1.5rem;
-        font-size: 0.95rem;
-        line-height: 1.7;
-      }
-      .testimonio-author {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-      }
-      .author-avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: rgba(59, 110, 140, 0.3);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 13px;
-        font-weight: 500;
-        color: var(--text);
-      }
-      .author-name {
-        font-weight: 500;
-        color: var(--text);
-        font-size: 14px;
-      }
-      .author-role {
-        font-size: 12px;
-        color: var(--muted);
-      }
-
-      /* ─── CTA SECTION ─── */
-      #cta {
-        text-align: center;
-        background: linear-gradient(
-          135deg,
-          rgba(59, 110, 140, 0.1) 0%,
-          rgba(200, 169, 110, 0.08) 100%
-        );
-        border-top: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
-      }
-      #cta h2 {
-        margin-bottom: 1rem;
-      }
-      #cta p {
-        max-width: 520px;
-        margin: 0 auto 2.5rem;
-        font-size: 1.05rem;
-      }
-      .cta-actions {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .cta-note {
-        margin-top: 1.5rem;
-        font-size: 13px;
-      }
-
-      /* ─── CONTACTO ─── */
-      #contacto .contact-grid {
+      /* ─── CONTACTE ─── */
+      #contacto .quadricula-contacte {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 5rem;
         align-items: start;
       }
-      .contact-info h2 {
+
+      .info-contacte h2 {
         margin-bottom: 1rem;
       }
-      .contact-info p {
+      .info-contacte p {
         margin-bottom: 2rem;
       }
-      .contact-items {
+
+      .elements-contacte {
         display: flex;
         flex-direction: column;
         gap: 1rem;
       }
-      .contact-item {
+
+      .element-contacte {
         display: flex;
         align-items: center;
         gap: 1rem;
         font-size: 14px;
-        color: var(--muted);
+        color: var(--apagat);
       }
-      .contact-item-icon {
+
+      .icona-element-contacte {
         width: 36px;
         height: 36px;
         border-radius: 8px;
-        background: var(--surface);
-        border: 1px solid var(--border);
+        background: var(--superficie);
+        border: 1px solid var(--vora);
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 16px;
         flex-shrink: 0;
       }
-      .contact-form {
+
+      .formulari-contacte {
         display: flex;
         flex-direction: column;
         gap: 1rem;
       }
-      .form-row {
+
+      .fila-formulari {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
       }
-      .form-group {
+
+      .grup-formulari {
         display: flex;
         flex-direction: column;
         gap: 6px;
       }
-      .form-group label {
+
+      .grup-formulari label {
         font-size: 13px;
-        color: var(--muted);
+        color: var(--apagat);
       }
-      .form-group input,
-      .form-group textarea,
-      .form-group select {
+
+      .grup-formulari input,
+      .grup-formulari textarea,
+      .grup-formulari select {
         font-family: var(--sans);
-        background: var(--surface);
-        border: 1px solid var(--border);
+        background: var(--superficie);
+        border: 1px solid var(--vora);
         border-radius: 8px;
         color: var(--text);
         padding: 12px 14px;
@@ -559,25 +472,29 @@
         transition: border-color 0.2s;
         width: 100%;
       }
-      .form-group input:focus,
-      .form-group textarea:focus,
-      .form-group select:focus {
+
+      .grup-formulari input:focus,
+      .grup-formulari textarea:focus,
+      .grup-formulari select:focus {
         border-color: rgba(200, 169, 110, 0.5);
       }
-      .form-group textarea {
+
+      .grup-formulari textarea {
         resize: vertical;
         min-height: 120px;
       }
-      .form-submit {
+
+      .enviament-formulari {
         margin-top: 0.5rem;
       }
-      .form-success {
+
+      .exit-formulari {
         display: none;
         text-align: center;
         padding: 1.5rem;
         background: rgba(200, 169, 110, 0.08);
         border: 1px solid rgba(200, 169, 110, 0.2);
-        border-radius: var(--radius);
+        border-radius: var(--radi);
         color: var(--accent);
         font-size: 15px;
       }
@@ -585,20 +502,23 @@
       /* ─── FOOTER ─── */
       footer {
         padding: 4rem 0 2rem;
-        border-top: 1px solid var(--border);
+        border-top: 1px solid var(--vora);
       }
-      .footer-grid {
+
+      .quadricula-peu {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr 1fr;
         gap: 3rem;
         margin-bottom: 3rem;
       }
-      .footer-brand p {
+
+      .marca-peu p {
         font-size: 14px;
         margin-top: 0.75rem;
         max-width: 260px;
       }
-      .footer-col h4 {
+
+      .columna-peu h4 {
         font-family: var(--sans);
         font-size: 13px;
         font-weight: 500;
@@ -607,39 +527,45 @@
         color: var(--text);
         margin-bottom: 1rem;
       }
-      .footer-col ul {
+
+      .columna-peu ul {
         list-style: none;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
       }
-      .footer-col ul a {
-        color: var(--muted);
+
+      .columna-peu ul a {
+        color: var(--apagat);
         text-decoration: none;
         font-size: 14px;
         transition: color 0.2s;
       }
-      .footer-col ul a:hover {
+
+      .columna-peu ul a:hover {
         color: var(--text);
       }
-      .footer-bottom {
+
+      .peu-inferior {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-top: 2rem;
-        border-top: 1px solid var(--border);
+        border-top: 1px solid var(--vora);
         font-size: 13px;
-        color: var(--muted);
+        color: var(--apagat);
       }
-      .social-links {
+
+      .enllacos-socials {
         display: flex;
         gap: 0.75rem;
       }
-      .social-link {
+
+      .enllaç-social {
         width: 34px;
         height: 34px;
-        background: var(--surface);
-        border: 1px solid var(--border);
+        background: var(--superficie);
+        border: 1px solid var(--vora);
         border-radius: 8px;
         display: flex;
         align-items: center;
@@ -648,188 +574,122 @@
         text-decoration: none;
         transition: border-color 0.2s;
       }
-      .social-link:hover {
-        border-color: rgba(255, 255, 255, 0.2);
-      }
 
-      /* ─── mobil/IA ─── */
-      @media (max-width: 768px) {
-        nav {
-          padding: 1rem 1.5rem;
-        }
-        .nav-links,
-        .nav-cta .btn {
-          display: none;
-        }
-        .hamburger {
-          display: flex;
-        }
-        .nav-menu-open .nav-links {
-          display: flex;
-          flex-direction: column;
-          gap: 1.5rem;
-          position: fixed;
-          top: 60px;
-          left: 0;
-          right: 0;
-          background: var(--bg);
-          padding: 2rem;
-          border-bottom: 1px solid var(--border);
-        }
-        .nav-menu-open .nav-cta {
-          display: none;
-        }
-        section {
-          padding: 4rem 0;
-        }
-        .hero-grid,
-        .about-grid,
-        .contact-grid {
-          grid-template-columns: 1fr;
-          gap: 2.5rem;
-        }
-        .hero-image,
-        .about-image {
-          display: none;
-        }
-        .hero-stats {
-          flex-wrap: wrap;
-          gap: 1.5rem;
-        }
-        .form-row {
-          grid-template-columns: 1fr;
-        }
-        .footer-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-        .footer-bottom {
-          flex-direction: column;
-          gap: 1rem;
-          text-align: center;
-        }
+      .enllaç-social:hover {
+        border-color: rgba(255, 255, 255, 0.2);
       }
     </style>
   </head>
   <body>
-    <!-- barra de navegacion -->
     <nav id="navbar">
       <a href="#hero" class="nav-logo">St. Homes</a>
-      <ul class="nav-links">
+      <ul class="nav-enllacos">
         <li><a href="#servicios">Serveis</a></li>
         <li><a href="#nosotros">Historia</a></li>
         <li><a href="#contacto">Contacte</a></li>
       </ul>
-      <div class="nav-cta">
-        <a href="#contacto" class="btn btn-primary">Consultar Beques</a>
+      <div class="nav-accio">
+        <a href="#contacto" class="boto boto-primari">Consultar Beques</a>
       </div>
-
-      <button class="hamburger" id="hamburger" aria-label="Menú">
-        <span></span><span></span><span></span>
-      </button>
     </nav>
 
-    <!-- main -->
     <section id="hero">
-      <div class="hero-bg"></div>
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-content">
-            <div class="hero-eyebrow reveal">
-              <span class="tag"
+      <div class="hero-fons"></div>
+      <div class="contenidor">
+        <div class="hero-quadricula">
+          <div class="hero-contingut">
+            <div class="hero-cella revelat">
+              <span class="etiqueta"
                 >T'ajudem a trobar el pis que tant necessites</span
               >
             </div>
-            <h1 class="hero-title reveal reveal-delay-1">
+            <h1 class="hero-titol revelat revelat-retard-1">
               St. Homes<br />Pisos <em>per</em><br />Estudiants
             </h1>
-            <p class="hero-desc reveal reveal-delay-2">
+            <p class="hero-descripcio revelat revelat-retard-2">
               A St. Homes t'ajudem a trobar els millors pisos per hostatjar-te
               durant el teu curs.
             </p>
-            <div class="hero-actions reveal reveal-delay-3">
-              <a href="#contacto" class="btn btn-primary">Començar ara</a>
-              <a href="#servicios" class="btn btn-outline">Veure serveis</a>
+            <div class="hero-accions revelat revelat-retard-3">
+              <a href="#contacto" class="boto boto-primari">Començar ara</a>
+              <a href="#servicios" class="boto boto-contorn">Veure serveis</a>
             </div>
-            <div class="hero-stats reveal reveal-delay-3">
+            <div class="hero-estadistiques revelat revelat-retard-3">
               <div>
-                <span class="stat-num">+200</span>
-                <span class="stat-label">Clients satisfets</span>
+                <span class="estadistica-num">+200</span>
+                <span class="estadistica-etiqueta">Clients satisfets</span>
               </div>
               <div>
-                <span class="stat-num">8 anys</span>
-                <span class="stat-label">D'experiència</span>
+                <span class="estadistica-num">8 anys</span>
+                <span class="estadistica-etiqueta">D'experiència</span>
               </div>
               <div>
-                <span class="stat-num">98%</span>
-                <span class="stat-label">Taxa de retenció</span>
+                <span class="estadistica-num">98%</span>
+                <span class="estadistica-etiqueta">Taxa de retenció</span>
               </div>
             </div>
           </div>
-          <div class="hero-image reveal reveal-delay-2">
-            <span><img src="images/PisosStHomes.jpg" alt=""></span>
+          <div class="hero-imatge revelat revelat-retard-2">
+            <span><img src="images/PisosStHomes.jpg" alt="" /></span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- barra de separación -->
-    <div id="logos">
-      <div class="container"></div>
-    </div>
+    <div id="logos"><div class="contenidor"></div></div>
 
-    <!-- Servicios -->
     <section id="servicios">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="tag">Qué hacemos</span>
+      <div class="contenidor">
+        <div class="cap-seccio revelat">
+          <span class="etiqueta">Qué hacemos</span>
           <h2>Servicios principales</h2>
           <p>
             Explica brevemente el valor que aportan tus servicios al cliente.
           </p>
         </div>
-        <div class="features-grid">
-          <div class="feature-card reveal">
-            <div class="feature-icon">◈</div>
+        <div class="quadricula-funcions">
+          <div class="targeta-funcio revelat">
+            <div class="icona-funcio">◈</div>
             <h3>Servicio uno</h3>
             <p>
               Describe aquí en qué consiste este servicio y qué problema
               resuelve para tu cliente.
             </p>
           </div>
-          <div class="feature-card reveal reveal-delay-1">
-            <div class="feature-icon">⬡</div>
+          <div class="targeta-funcio revelat revelat-retard-1">
+            <div class="icona-funcio">⬡</div>
             <h3>Servicio dos</h3>
             <p>
               Describe aquí en qué consiste este servicio y qué problema
               resuelve para tu cliente.
             </p>
           </div>
-          <div class="feature-card reveal reveal-delay-2">
-            <div class="feature-icon">◎</div>
+          <div class="targeta-funcio revelat revelat-retard-2">
+            <div class="icona-funcio">◎</div>
             <h3>Servicio tres</h3>
             <p>
               Describe aquí en qué consiste este servicio y qué problema
               resuelve para tu cliente.
             </p>
           </div>
-          <div class="feature-card reveal">
-            <div class="feature-icon">△</div>
+          <div class="targeta-funcio revelat">
+            <div class="icona-funcio">△</div>
             <h3>Servicio cuatro</h3>
             <p>
               Describe aquí en qué consiste este servicio y qué problema
               resuelve para tu cliente.
             </p>
           </div>
-          <div class="feature-card reveal reveal-delay-1">
-            <div class="feature-icon">⬢</div>
+          <div class="targeta-funcio revelat revelat-retard-1">
+            <div class="icona-funcio">⬢</div>
             <h3>Servicio cinco</h3>
             <p>
               Describe aquí en qué consiste este servicio y qué problema
               resuelve para tu cliente.
             </p>
           </div>
-          <div class="feature-card reveal reveal-delay-2">
-            <div class="feature-icon">✦</div>
+          <div class="targeta-funcio revelat revelat-retard-2">
+            <div class="icona-funcio">✦</div>
             <h3>Servicio seis</h3>
             <p>
               Describe aquí en qué consiste este servicio y qué problema
@@ -840,36 +700,30 @@
       </div>
     </section>
 
-    <!-- barra de separación -->
-    <div id="logos">
-      <div class="container"></div>
-    </div>
+    <div id="logos"><div class="contenidor"></div></div>
 
-    <!-- Historia -->
     <section id="nosotros">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-image reveal">
+      <div class="contenidor">
+        <div class="quadricula-nosaltres">
+          <div class="imatge-nosaltres revelat">
             <span>Tu foto o ilustración</span>
           </div>
-          <div class="about-content">
-            <span class="tag reveal">Qui som</span>
-            <h2 class="reveal">La nosta<br />historia<br />palabras</h2>
-            <p class="reveal">
-              Párrafo introductorio sobre tu empresa o proyecto. Quién eres,
-              desde cuándo, y cuál es tu misión.
+          <div class="contingut-nosaltres">
+            <span class="etiqueta revelat">Qui som</span>
+            <h2 class="revelat">La nosta<br />historia<br />palabras</h2>
+            <p class="revelat">
+              Párrafo introductorio sobre tu empresa o proyecto.
             </p>
-            <p class="reveal">
-              Segundo párrafo con más detalle. Puedes hablar de tus valores, tu
-              equipo o tu enfoque diferencial.
+            <p class="revelat">
+              Segundo párrafo con más detalle sobre valores y equipo.
             </p>
-            <ul class="about-list reveal">
+            <ul class="llista-nosaltres revelat">
               <li>Punto clave uno de tu propuesta de valor</li>
               <li>Punto clave dos de tu propuesta de valor</li>
               <li>Punto clave tres de tu propuesta de valor</li>
               <li>Punto clave cuatro de tu propuesta de valor</li>
             </ul>
-            <a href="#contacto" class="btn btn-primary reveal"
+            <a href="#contacto" class="boto boto-primari revelat"
               >Contacta'ns</a
             >
           </div>
@@ -877,48 +731,44 @@
       </div>
     </section>
 
-    <!-- barra de separación -->
-    <div id="logos">
-      <div class="container"></div>
-    </div>
+    <div id="logos"><div class="contenidor"></div></div>
 
-    <!-- contacto -->
     <section id="contacto">
-      <div class="container">
-        <div class="contact-grid">
-          <div class="contact-info">
-            <span class="tag reveal">Contacte</span>
-            <h2 class="reveal">Contacta'ns
-            <div class="contact-items reveal">
-              <div class="contact-item">
-                <div class="contact-item-icon">✉</div>
+      <div class="contenidor">
+        <div class="quadricula-contacte">
+          <div class="info-contacte">
+            <span class="etiqueta revelat">Contacte</span>
+            <h2 class="revelat">Contacta'ns</h2>
+            <div class="elements-contacte revelat">
+              <div class="element-contacte">
+                <div class="icona-element-contacte">✉</div>
                 <span>StHomes.com</span>
               </div>
-              <div class="contact-item">
-                <div class="contact-item-icon">☎</div>
+              <div class="element-contacte">
+                <div class="icona-element-contacte">☎</div>
                 <span>+34 636 140 204</span>
               </div>
-              <div class="contact-item">
-                <div class="contact-item-icon">⌖</div>
+              <div class="element-contacte">
+                <div class="icona-element-contacte">⌖</div>
                 <span>Barcelona, Espanya</span>
               </div>
             </div>
           </div>
-          <div class="reveal">
-            <div class="contact-form" id="contactForm">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="nombre">Nom</label>
-                  <input type="text" id="nombre" placeholder="El teu nom aquí" />
+          <div class="revelat">
+            <div class="formulari-contacte" id="formulariContacte">
+              <div class="fila-formulari">
+                <div class="grup-formulari">
+                  <label for="nom">Nom</label>
+                  <input type="text" id="nom" placeholder="El teu nom aquí" />
                 </div>
-                <div class="form-group">
+                <div class="grup-formulari">
                   <label for="email">Email</label>
                   <input type="email" id="email" placeholder="tu@email.com" />
                 </div>
               </div>
-              <div class="form-group">
-                <label for="asunto">Assumpte</label>
-                <select id="asunto">
+              <div class="grup-formulari">
+                <label for="assumpte">Assumpte</label>
+                <select id="assumpte">
                   <option value="">Selecciona un tema…</option>
                   <option>Consulta general</option>
                   <option>Pressupost</option>
@@ -926,126 +776,104 @@
                   <option>Altre</option>
                 </select>
               </div>
-              <div class="form-group">
-                <label for="mensaje">Missatge</label>
+              <div class="grup-formulari">
+                <label for="missatge">Missatge</label>
                 <textarea
-                  id="mensaje"
-                  placeholder="Explica'ns sobre els teus dubtes sobre els nostres serveis o consulta…"
+                  id="missatge"
+                  placeholder="Explica'ns els teus dubtes…"
                 ></textarea>
               </div>
-              <div class="form-submit">
+              <div class="enviament-formulari">
                 <button
                   type="button"
-                  class="btn btn-primary"
-                  onclick="enviarFormulario()"
+                  class="boto boto-primari"
+                  onclick="enviarFormulari()"
                   style="width: 100%"
                 >
                   Enviar missatge
                 </button>
               </div>
             </div>
-            <div class="form-success" id="formSuccess">
-              ✓ &nbsp;¡Missatge enviat! Te contactamos pronto.
+            <div class="exit-formulari" id="exitFormulari">
+              ✓ &nbsp;Missatge enviat! Et contactarem aviat.
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- footer -->
     <footer>
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <a href="#hero" class="nav-logo">TuMarca</a>
-            <p>
-              Descripción breve de tu empresa o proyecto. Una o dos frases que
-              resuman tu misión.
-            </p>
+      <div class="contenidor">
+        <div class="quadricula-peu">
+          <div class="marca-peu">
+            <a href="#hero" class="nav-logo">St. Homes</a>
+            <p>Troba el teu pis d'estudiant pel teu proper curs, ràpid, senzill i consulta les nostres beques.</p>
           </div>
-          <div class="footer-col">
-            <h4>Servicios</h4>
+          <div class="columna-peu">
+            <h4>Serveis</h4>
             <ul>
-              <li><a href="#servicios">Servicio uno</a></li>
-              <li><a href="#servicios">Servicio dos</a></li>
-              <li><a href="#servicios">Servicio tres</a></li>
+              <li><a href="#servicios"></a></li>
+              <li><a href="#servicios"></a></li>
+              <li><a href="#servicios"></a></li>
             </ul>
           </div>
-          <div class="footer-col">
+          <div class="columna-peu">
             <h4>Empresa</h4>
             <ul>
-              <li><a href="#nosotros">Nosotros</a></li>
-              <li><a href="#testimonios">Clientes</a></li>
-              <li><a href="#contacto">Contacto</a></li>
+              <li><a href="#nosotros">Nosaltres</a></li>
+              <li><a href="#testimonios">Clients</a></li>
+              <li><a href="#contacto">Contacte</a></li>
             </ul>
           </div>
-          <div class="footer-col">
+          <div class="columna-peu">
             <h4>Legal</h4>
             <ul>
-              <li><a href="#">Aviso legal</a></li>
-              <li><a href="#">Privacidad</a></li>
               <li><a href="#">Cookies</a></li>
             </ul>
           </div>
         </div>
-        <div class="footer-bottom">
-          <span>© 2025 TuMarca. Todos los derechos reservados.</span>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-            <a href="#" class="social-link" aria-label="Instagram">ig</a>
-            <a href="#" class="social-link" aria-label="Twitter">tw</a>
+        <div class="peu-inferior">
+          <span>© 2026 St. Homes. Tots els drets reservats.</span>
+          <div class="enllacos-socials">
+            <a href="#" class="enllaç-social" aria-label="LinkedIn">in</a>
+            <a href="#" class="enllaç-social" aria-label="Instagram">ig</a>
+            <a href="#" class="enllaç-social" aria-label="Twitter">tw</a>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Javascript -->
     <script>
-      // Navbar scroll
       const navbar = document.getElementById("navbar");
       window.addEventListener("scroll", () => {
-        navbar.classList.toggle("scrolled", window.scrollY > 20);
+        navbar.classList.toggle("desplacat", window.scrollY > 20);
       });
 
-      // Hamburger menú móvil
-      const hamburger = document.getElementById("hamburger");
-      hamburger.addEventListener("click", () => {
-        navbar.classList.toggle("nav-menu-open");
-      });
-      document.querySelectorAll(".nav-links a").forEach((a) => {
-        a.addEventListener("click", () =>
-          navbar.classList.remove("nav-menu-open"),
-        );
-      });
-
-      // Animaciones de entrada con IntersectionObserver
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
+      const observador = new IntersectionObserver(
+        (entrades) => {
+          entrades.forEach((e) => {
             if (e.isIntersecting) {
               e.target.classList.add("visible");
-              observer.unobserve(e.target);
+              observador.unobserve(e.target);
             }
           });
         },
         { threshold: 0.1 },
       );
       document
-        .querySelectorAll(".reveal")
-        .forEach((el) => observer.observe(el));
+        .querySelectorAll(".revelat")
+        .forEach((el) => observador.observe(el));
 
-      // Formulario de contacto (simulado — conecta tu backend aquí)
-      function enviarFormulario() {
-        const nombre = document.getElementById("nombre").value.trim();
+      function enviarFormulari() {
+        const nom = document.getElementById("nom").value.trim();
         const email = document.getElementById("email").value.trim();
-        const mensaje = document.getElementById("mensaje").value.trim();
-        if (!nombre || !email || !mensaje) {
-          alert("Por favor completa los campos obligatorios.");
+        const missatge = document.getElementById("missatge").value.trim();
+        if (!nom || !email || !missatge) {
+          alert("Si us plau, omple els camps obligatoris.");
           return;
         }
-        // Aquí conecta con tu backend, EmailJS, Formspree, etc.
-        document.getElementById("contactForm").style.display = "none";
-        document.getElementById("formSuccess").style.display = "block";
+        document.getElementById("formulariContacte").style.display = "none";
+        document.getElementById("exitFormulari").style.display = "block";
       }
     </script>
   </body>
