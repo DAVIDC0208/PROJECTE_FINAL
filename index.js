@@ -29,3 +29,23 @@ const navbar = document.getElementById("navbar");
         document.getElementById("formulariContacte").style.display = "none";
         document.getElementById("exitFormulari").style.display = "block";
       }
+
+function canviarTema() {
+  const blanc = document.body.classList
+    .toggle("tema-blanc");
+
+  document.getElementById("boto-tema")
+    .querySelector(".icona-tema")
+    .textContent = blanc ? "☾" : "☀";
+  
+  localStorage.setItem("tema", blanc ? "blanc" : "fosc");
+}
+
+(function() {
+  if (localStorage.getItem("tema") === "blanc") {
+    document.body.classList.add("tema-blanc");
+    document.getElementById("boto-tema")
+      .querySelector(".icona-tema")
+      .textContent = "☾";
+  }
+})();

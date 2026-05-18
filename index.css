@@ -7,22 +7,18 @@
 }
 
 :root {
-  --fons: #201b1c;
+  --fons: #eeebeb;
   --fons2: #250902;
-  --superficie: #640d14;
+  --superficie: #31247e;
   --vora: rgba(255, 255, 255, 0.07);
-  --text: #f0ede8;
+  --text: #000000;
   --apagat: #888480;
-  --accent: rgba(255, 30, 0);
+  --accent: rgb(130, 95, 185);
   --accent2: #3b6e8c;
   --radi: 12px;
   --max: 1100px;
-  --serifa: "DM Serif Display", Georgia, serif;
-  --sans: "DM Sans", system-ui, sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
+  --serifa: "Oswald", Georgia, serif;
+  --sans: "Oswald", sans-serif;
 }
 
 body {
@@ -73,12 +69,12 @@ body {
 }
 
 .boto-primari:hover {
-  background: #dfc080;
+  background: #777268;
   transform: translateY(-1px);
 }
 
 .boto-contorn {
-  background: transparent;
+  background: transparen;
   color: var(--text);
   border: 1px solid var(--vora);
 }
@@ -95,10 +91,11 @@ section {
 h1,
 h2,
 h3 {
-  font-family: var(--serifa);
+  font-family: var(--serifa); 
   font-weight: 400;
   line-height: 1.15;
 }
+/* para que afecte a todas las fuentes de la web "--serifa"*/
 h1 {
   font-size: clamp(2.8rem, 6vw, 5rem);
 }
@@ -124,9 +121,34 @@ nav {
   justify-content: space-between;
   padding: 1.25rem 2.5rem;
   background: rgba(14, 14, 15, 0.8);
-  backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s;
+}
+
+.boto-tema {
+  padding: 8px 12px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+body.tema-blanc {
+  --fons: #f5f4f0;
+  --fons2: #eae8e3;
+  --superficie: #e0ddd7;
+  --vora: rgba(0,0,0,0.09);
+  --text: #1a1715;
+  --apagat: #5a5753;
+  --accent: rgba(200,30,0);
+}
+
+body.tema-blanc nav {
+  background: rgb(245,244,240,0.85);
+}
+
+body.tema-blanc .grup-formulari input,
+body.tema-blanc .grup-formulari textarea,
+body.tema-blanc .grup-formulari select {
+  color: #1a1715;
 }
 
 nav.desplacat {
@@ -225,17 +247,21 @@ nav.desplacat {
 }
 
 .hero-imatge {
-  aspect-ratio: 3/4;
-  background: var(--superficie);
-  border-radius: 20px;
+  aspect-ratio: 4/4;
+  border-radius: 10px;
   border: 1px solid var(--vora);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--apagat);
   font-size: 14px;
   position: relative;
   overflow: hidden;
+  height: 400px;
+  width: 100%;
+}
+
+.hero-imatge img {
+  width: 100%;
 }
 
 .hero-imatge::before {
@@ -341,7 +367,7 @@ nav.desplacat {
 }
 
 .imatge-nosaltres {
-  aspect-ratio: 3/4;
+  aspect-ratio: 5/4;
   background: var(--superficie);
   border-radius: 20px;
   border: 1px solid var(--vora);
