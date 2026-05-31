@@ -9,7 +9,7 @@
 :root {
   --fons: #eeebeb;
   --fons2: #250902;
-  --superficie: #31247e;
+  --superficie: rgb(130, 95, 185);
   --vora: rgba(255, 255, 255, 0.07);
   --text: #000000;
   --apagat: #888480;
@@ -74,7 +74,7 @@ body {
 }
 
 .boto-contorn {
-  background: transparen;
+  background: transparent;
   color: var(--text);
   border: 1px solid var(--vora);
 }
@@ -88,33 +88,21 @@ section {
   padding: 6rem 0;
 }
 
-h1,
-h2,
-h3 {
-  font-family: var(--serifa); 
+h1, h2, h3 {
+  font-family: var(--serifa);
   font-weight: 400;
   line-height: 1.15;
 }
-/* para que afecte a todas las fuentes de la web "--serifa"*/
-h1 {
-  font-size: clamp(2.8rem, 6vw, 5rem);
-}
-h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-}
-h3 {
-  font-size: 1.4rem;
-}
-p {
-  color: var(--apagat);
-}
+
+h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: 1.4rem; }
+p  { color: var(--apagat); }
 
 /* ─── NAVBAR ─── */
 nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 100;
   display: flex;
   align-items: center;
@@ -125,41 +113,14 @@ nav {
   transition: border-color 0.3s;
 }
 
-.boto-tema {
-  padding: 8px 12px;
-  font-size: 18px;
-  line-height: 1;
-}
-
-body.tema-blanc {
-  --fons: #f5f4f0;
-  --fons2: #eae8e3;
-  --superficie: #e0ddd7;
-  --vora: rgba(0,0,0,0.09);
-  --text: #1a1715;
-  --apagat: #5a5753;
-  --accent: rgba(200,30,0);
-}
-
-body.tema-blanc nav {
-  background: rgb(245,244,240,0.85);
-}
-
-body.tema-blanc .grup-formulari input,
-body.tema-blanc .grup-formulari textarea,
-body.tema-blanc .grup-formulari select {
-  color: #1a1715;
-}
-
-nav.desplacat {
-  border-color: var(--vora);
-}
-
 .nav-logo {
   font-family: var(--serifa);
   font-size: 1.5rem;
-  color: var(--text);
+  color: #ffffff;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .nav-enllacos {
@@ -169,7 +130,7 @@ nav.desplacat {
 }
 
 .nav-enllacos a {
-  color: var(--apagat);
+  color: #ffffff;
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
@@ -177,7 +138,7 @@ nav.desplacat {
 }
 
 .nav-enllacos a:hover {
-  color: var(--text);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .nav-accio {
@@ -201,16 +162,8 @@ nav.desplacat {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(
-      ellipse 60% 50% at 80% 30%,
-      rgba(59, 110, 140, 0.15) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse 50% 60% at 20% 80%,
-      rgba(200, 169, 110, 0.08) 0%,
-      transparent 60%
-    );
+    radial-gradient(ellipse 60% 50% at 80% 30%, rgba(59,110,140,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 20% 80%, rgba(200,169,110,0.08) 0%, transparent 60%);
 }
 
 .hero-quadricula {
@@ -221,18 +174,9 @@ nav.desplacat {
   position: relative;
 }
 
-.hero-cella {
-  margin-bottom: 1.5rem;
-}
-
-.hero-titol {
-  margin-bottom: 1.5rem;
-}
-
-.hero-titol em {
-  font-style: italic;
-  color: var(--accent);
-}
+.hero-cella { margin-bottom: 1.5rem; }
+.hero-titol { margin-bottom: 1.5rem; }
+.hero-titol em { font-style: italic; color: var(--accent); }
 
 .hero-descripcio {
   font-size: 1.1rem;
@@ -253,27 +197,19 @@ nav.desplacat {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
   position: relative;
   overflow: hidden;
   height: 400px;
   width: 100%;
 }
 
-.hero-imatge img {
-  width: 100%;
-}
+.hero-imatge img { width: 100%; }
 
 .hero-imatge::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(59, 110, 140, 0.12) 0%,
-    transparent 50%,
-    rgba(200, 169, 110, 0.06) 100%
-  );
+  background: linear-gradient(135deg, rgba(59,110,140,0.12) 0%, transparent 50%, rgba(200,169,110,0.06) 100%);
 }
 
 .hero-estadistiques {
@@ -326,9 +262,7 @@ nav.desplacat {
   border: 1px solid var(--vora);
   border-radius: var(--radi);
   padding: 2rem;
-  transition:
-    border-color 0.2s,
-    transform 0.2s;
+  transition: border-color 0.2s, transform 0.2s;
 }
 
 .targeta-funcio:hover {
@@ -348,15 +282,8 @@ nav.desplacat {
   font-size: 22px;
 }
 
-.targeta-funcio h3 {
-  color: var(--text);
-  margin-bottom: 0.5rem;
-  font-size: 1.15rem;
-}
-
-.targeta-funcio p {
-  font-size: 0.95rem;
-}
+.targeta-funcio h3 { color: var(--text); margin-bottom: 0.5rem; font-size: 1.15rem; }
+.targeta-funcio p  { font-size: 0.95rem; }
 
 /* ─── NOSALTRES ─── */
 #nosotros .quadricula-nosaltres {
@@ -378,12 +305,8 @@ nav.desplacat {
   font-size: 14px;
 }
 
-.contingut-nosaltres h2 {
-  margin-bottom: 1.25rem;
-}
-.contingut-nosaltres p {
-  margin-bottom: 1.25rem;
-}
+.contingut-nosaltres h2 { margin-bottom: 1.25rem; }
+.contingut-nosaltres p  { margin-bottom: 1.25rem; }
 
 .llista-nosaltres {
   list-style: none;
@@ -414,12 +337,8 @@ nav.desplacat {
   align-items: start;
 }
 
-.info-contacte h2 {
-  margin-bottom: 1rem;
-}
-.info-contacte p {
-  margin-bottom: 2rem;
-}
+.info-contacte h2 { margin-bottom: 1rem; }
+.info-contacte p  { margin-bottom: 2rem; }
 
 .elements-contacte {
   display: flex;
@@ -466,10 +385,7 @@ nav.desplacat {
   gap: 6px;
 }
 
-.grup-formulari label {
-  font-size: 13px;
-  color: var(--apagat);
-}
+.grup-formulari label { font-size: 13px; color: var(--apagat); }
 
 .grup-formulari input,
 .grup-formulari textarea,
@@ -497,38 +413,27 @@ nav.desplacat {
   min-height: 120px;
 }
 
-.enviament-formulari {
-  margin-top: 0.5rem;
-}
-
-.exit-formulari {
-  display: none;
-  text-align: center;
-  padding: 1.5rem;
-  background: rgba(200, 169, 110, 0.08);
-  border: 1px solid rgba(200, 169, 110, 0.2);
-  border-radius: var(--radi);
-  color: var(--accent);
-  font-size: 15px;
-}
+.enviament-formulari { margin-top: 0.5rem; }
 
 /* ─── FOOTER ─── */
 footer {
-  padding: 4rem 0 2rem;
+  padding: 2rem 0 1rem;
   border-top: 1px solid var(--vora);
+  background: #000000;
 }
 
 .quadricula-peu {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 3rem;
-  margin-bottom: 3rem;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .marca-peu p {
   font-size: 14px;
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
   max-width: 260px;
+  color: #ffffff;
 }
 
 .columna-peu h4 {
@@ -537,57 +442,51 @@ footer {
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text);
-  margin-bottom: 1rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
 }
 
 .columna-peu ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.25rem;
 }
 
 .columna-peu ul a {
-  color: var(--apagat);
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   font-size: 14px;
   transition: color 0.2s;
 }
 
-.columna-peu ul a:hover {
-  color: var(--text);
-}
+.columna-peu ul a:hover { color: #ffffff; }
 
 .peu-inferior {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 2rem;
-  border-top: 1px solid var(--vora);
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 13px;
-  color: var(--apagat);
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.enllacos-socials {
-  display: flex;
-  gap: 0.75rem;
-}
+.enllacos-socials { display: flex; gap: 0.75rem; }
 
 .enllaç-social {
   width: 34px;
   height: 34px;
-  background: var(--superficie);
-  border: 1px solid var(--vora);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
   text-decoration: none;
+  color: #ffffff;
   transition: border-color 0.2s;
 }
 
-.enllaç-social:hover {
-  border-color: rgba(255, 255, 255, 0.2);
-}
+.enllaç-social:hover { border-color: rgba(255, 255, 255, 0.4); }
