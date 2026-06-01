@@ -8,7 +8,7 @@
   position: fixed;
   inset: 0;
   z-index: 0;
-  background: var(--fons);
+  background: #eeebeb;
 }
 
 .beques-fons-gradient {
@@ -51,7 +51,7 @@
 
 .login-cap p {
   font-size: 14px;
-  color: var(--apagat);
+  color: #000000;
 }
 
 .login-cos {
@@ -71,18 +71,18 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  color: var(--apagat);
+  color: #000000;
   cursor: pointer;
 }
 
 .recordar input[type="checkbox"] {
-  accent-color: var(--accent);
+  accent-color: rgb(130, 95, 185);
   width: 14px;
   height: 14px;
 }
 
 .oblidat {
-  color: var(--accent);
+  color: rgb(130, 95, 185);
   text-decoration: none;
   font-size: 13px;
   transition: opacity 0.2s;
@@ -103,11 +103,11 @@
 .login-registre {
   text-align: center;
   font-size: 13px;
-  color: var(--apagat);
+  color: #000000;
 }
 
 .login-registre a {
-  color: var(--accent);
+  color: rgb(130, 95, 185);
   text-decoration: none;
   transition: opacity 0.2s;
 }
