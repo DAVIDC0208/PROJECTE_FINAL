@@ -127,7 +127,7 @@ document.querySelector('.enviament-formulari button').addEventListener('click', 
 
 ---
 
-## Autor
+## David Cristóbal Ruiz
 
 Projecte desenvolupat com a pràctica de desenvolupament web frontend.  
 **© 2026 St. Homes. Tots els drets reservats.**
