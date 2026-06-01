@@ -1,0 +1,268 @@
+.pisos-header {
+  padding: 6rem 0 3rem;
+}
+
+.pisos-header .cap-seccio {
+  margin-bottom: 2rem;
+}
+
+/* ─── FILTRES ─── */
+.filtres-bar {
+  background: rgb(130, 95, 185);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.filtre-grup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.filtre-grup label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.filtre-grup select,
+.filtre-grup input {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.filtre-grup select option {
+  background: #3a2560;
+  color: #ffffff;
+}
+
+.filtre-grup select:focus,
+.filtre-grup input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.filtre-accio {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* ─── RESULTAT ─── */
+.resultat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.resultat-count {
+  font-size: 14px;
+  color: #555;
+}
+
+.resultat-count strong {
+  color: #000;
+  font-weight: 500;
+}
+
+.ordre-sel {
+  font-family: "Oswald", sans-serif;
+  font-size: 13px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: #000;
+  cursor: pointer;
+  outline: none;
+}
+
+/* ─── GRID ─── */
+.pisos-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pisos-fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* ─── TARGETA HORITZONTAL ─── */
+.targeta-pis {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+  cursor: pointer;
+  display: flex;
+}
+
+.targeta-pis:hover {
+  border-color: rgb(130, 95, 185);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(130, 95, 185, 0.1);
+}
+
+.targeta-pis-imatge {
+  width: 240px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.targeta-pis-imatge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─── TARGETA VERTICAL ─── */
+.targeta-pis-v {
+  flex-direction: column;
+}
+
+.targeta-pis-v .targeta-pis-imatge {
+  width: 100%;
+  height: 180px;
+}
+
+/* ─── BADGES ─── */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgb(130, 95, 185);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-nou {
+  background: #3b6e8c;
+}
+
+.badge-fotos {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.guardar-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: #888;
+  transition: color 0.15s;
+}
+
+.guardar-btn:hover {
+  color: rgb(130, 95, 185);
+}
+
+/* ─── COS TARGETA ─── */
+.targeta-pis-cos {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.pis-preu {
+  font-family: "Oswald", serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 0.25rem;
+}
+
+.pis-preu span {
+  font-size: 13px;
+  font-weight: 400;
+  color: #777;
+}
+
+.pis-adreca {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.pis-specs {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #444;
+}
+
+.sep {
+  color: #ccc;
+}
+
+.pis-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.tag {
+  font-size: 10px;
+  background: rgba(130, 95, 185, 0.1);
+  border: 1px solid rgba(130, 95, 185, 0.2);
+  color: rgb(130, 95, 185);
+  border-radius: 6px;
+  padding: 2px 9px;
+  font-weight: 500;
+}
+
+.pis-desc {
+  font-size: 12px;
+  color: #666;
+  margin-top: 0.75rem;
+  line-height: 1.5;
+}

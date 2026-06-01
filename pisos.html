@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>St. Homes — Pisos</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="index.css"/>
+<link rel="stylesheet" href="pisos.css"/>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="images/St.homes_logo.png" alt="St. Homes logo" style="height:100px;width:auto;"/>
+    St. Homes
+  </a>
+  <ul class="nav-enllacos">
+    <li><a href="index.html#oferim">Què oferim</a></li>
+    <li><a href="index.html#nosotros">Historia</a></li>
+    <li><a href="index.html#contacto">Contacte</a></li>
+  </ul>
+  <div class="nav-accio">
+    <a href="beques.html" class="boto boto-primari">Consultar Beques</a>
+  </div>
+</nav>
+
+<section class="pisos-header">
+  <div class="contenidor">
+    <div class="cap-seccio">
+      <h2>Troba el teu pis ideal</h2>
+      <p>Tots els pisos per a estudiants a Barcelona i rodalies.</p>
+    </div>
+
+    <div class="filtres-bar">
+      <div class="filtre-grup">
+        <label>Zona</label>
+        <select><option>Tota Barcelona</option><option>Eixample</option><option>Gràcia</option><option>Sarrià</option><option>Sants</option></select>
+      </div>
+      <div class="filtre-grup">
+        <label>Preu màx.</label>
+        <select><option>Sense límit</option><option>Fins 600 €/mes</option><option>Fins 800 €/mes</option><option>Fins 1.000 €/mes</option></select>
+      </div>
+      <div class="filtre-grup">
+        <label>Habitacions</label>
+        <select><option>Qualsevol</option><option>1 hab.</option><option>2 hab.</option><option>3+ hab.</option></select>
+      </div>
+      <div class="filtre-grup">
+        <label>Tipus</label>
+        <select><option>Pis complet</option><option>Habitació</option><option>Estudi</option></select>
+      </div>
+      <div class="filtre-accio">
+        <button class="boto boto-primari">Cercar</button>
+      </div>
+    </div>
+
+    <div class="resultat-header">
+      <div class="resultat-count"><strong>47 pisos</strong> disponibles per a estudiants</div>
+      <select class="ordre-sel">
+        <option>Més rellevants</option>
+        <option>Menor preu</option>
+        <option>Major preu</option>
+        <option>Més nous</option>
+      </select>
+    </div>
+
+    <div class="pisos-grid">
+
+      <!-- Targeta horitzontal destacada -->
+      <div class="targeta-pis">
+        <div class="targeta-pis-imatge">
+          <img src="images/pisosestudiantes.webp" alt="Pis Eixample"/>
+          <span class="badge">Destacat</span>
+          <span class="badge-fotos"> 18</span>
+          <div class="guardar-btn">♡</div>
+        </div>
+        <div class="targeta-pis-cos">
+          <div>
+            <div class="pis-preu">680 €<span>/mes</span></div>
+            <div class="pis-adreca"> Carrer d'Enric Granados, Eixample Esquerra</div>
+            <div class="pis-specs">
+              <span class="pis-spec"> 90 m²</span>
+              <span class="sep">·</span>
+              <span class="pis-spec"> 4 hab.</span>
+              <span class="sep">·</span>
+              <span class="pis-spec"> 2 banys</span>
+              <span class="sep">·</span>
+              <span class="pis-spec"> 3a planta</span>
+            </div>
+            <div class="pis-tags">
+              <span class="tag">Ascensor</span>
+              <span class="tag">Wifi incl.</span>
+              <span class="tag">A/C</span>
+              <span class="tag">Reformat</span>
+            </div>
+          </div>
+          <div class="pis-desc">Pis espaiós al cor de l'Eixample, ideal per a 3-4 estudiants. Cuina equipada, salita i terrassa. A 5 min de la UB.</div>
+        </div>
+      </div>
+
+      <!-- Fila de dues targetes verticals -->
+      <div class="pisos-fila">
+
+        <div class="targeta-pis targeta-pis-v">
+          <div class="targeta-pis-imatge">
+            <img src="images/piso2.webp" alt="Pis Balmes"/>
+            <span class="badge badge-nou">Nou</span>
+            <span class="badge-fotos"> 12</span>
+            <div class="guardar-btn">♡</div>
+          </div>
+          <div class="targeta-pis-cos">
+            <div class="pis-preu">520 €<span>/mes</span></div>
+            <div class="pis-adreca"> Carrer de Balmes, Eixample</div>
+            <div class="pis-specs">
+              <span class="pis-spec"> 75 m²</span>
+              <span class="sep">·</span>
+              <span class="pis-spec"> 3 hab.</span>
+              <span class="sep">·</span>
+              <span class="pis-spec"> 1 bany</span>
+            </div>
+            <div class="pis-tags">
+              <span class="tag">Beca compatible</span>
+              <span class="tag">Ascensor</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="targeta-pis targeta-pis-v">
+          <div class="targeta-pis-imatge">
+            <img src="images/pisosestudiantes.webp" alt="Pis Aragó"/>
+            <span class="badge-fotos"> 9</span>
+            <div class="guardar-btn">♡</div>
+          </div>
+          <div class="targeta-pis-cos">
+            <div class="pis-preu">380 €<span>/mes</span></div>
+            <div class="pis-adreca"> Carrer d'Aragó, Eixample</div>
+            <div class="pis-specs">
+              <span class="pis-spec"> 55 m²</span>
+              <span class="sep">·</span>
+              <span class="pis-spec"> 2 hab.</span>
+              <span class="sep">·</span>
+              <span class="pis-spec"> 1 bany</span>
+            </div>
+            <div class="pis-tags">
+              <span class="tag">Econòmic</span>
+              <span class="tag">Prop UPC</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Altra targeta horitzontal -->
+      <div class="targeta-pis">
+        <div class="targeta-pis-imatge">
+          <img src="images/piso2.webp" alt="Pis Diagonal"/>
+          <span class="badge-fotos"> 21</span>
+          <div class="guardar-btn">♡</div>
+        </div>
+        <div class="targeta-pis-cos">
+          <div>
+            <div class="pis-preu">450 €<span>/mes</span></div>
+            <div class="pis-adreca"> Av. Diagonal, Gràcia</div>
+            <div class="pis-specs">
+              <span class="pis-spec"> 65 m²</span>
+              <span class="sep">·</span>
+              <span class="pis-spec"> 3 hab.</span>
+              <span class="sep">·</span>
+              <span class="pis-spec"> 1 bany</span>
+              <span class="sep">·</span>
+              <span class="pis-spec"> 5a planta</span>
+            </div>
+            <div class="pis-tags">
+              <span class="tag">Terrassa</span>
+              <span class="tag">Vistes</span>
+              <span class="tag">Beca compatible</span>
+            </div>
+          </div>
+          <div class="pis-desc">Pis lluminós amb vistes a la Diagonal. Molt ben connectat amb les principals universitats de Barcelona.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="contenidor">
+    <div class="quadricula-peu">
+      <div class="marca-peu">
+        <a href="index.html" class="nav-logo">
+          <img src="images/St.homes_logo.png" alt="St. Homes logo" style="height:80px;width:auto;"/>
+          St. Homes
+        </a>
+        <p>Troba el teu pis d'estudiant pel teu proper curs, ràpid, senzill i consulta les nostres beques.</p>
+      </div>
+      <div class="columna-peu">
+        <h4>Serveis</h4>
+        <ul>
+          <li><a href="index.html#oferim">Què oferim</a></li>
+          <li><a href="pisos.html">Pisos</a></li>
+        </ul>
+      </div>
+      <div class="columna-peu">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="index.html#nosotros">Nosaltres</a></li>
+          <li><a href="index.html#contacto">Contacte</a></li>
+        </ul>
+      </div>
+      <div class="columna-peu">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="peu-inferior">
+      <span>© 2026 St. Homes. Tots els drets reservats.</span>
+      <div class="enllacos-socials">
+        <a href="#" class="enllaç-social" aria-label="LinkedIn">in</a>
+        <a href="#" class="enllaç-social" aria-label="Instagram">ig</a>
+        <a href="#" class="enllaç-social" aria-label="Twitter">tw</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
