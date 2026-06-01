@@ -1,0 +1,117 @@
+.pagina-beques {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.beques-fons {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: var(--fons);
+}
+
+.beques-fons-gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 30%, rgba(130, 95, 185, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 20% 80%, rgba(59, 110, 140, 0.1) 0%, transparent 60%);
+}
+
+.beques-main {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 2rem 4rem;
+}
+
+.login-card {
+  background: white;
+  border: 1px solid rgba(130, 95, 185, 0.15);
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 40px rgba(130, 95, 185, 0.12);
+}
+
+.login-cap {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-cap h2 {
+  margin-bottom: 0.4rem;
+  font-size: 1.8rem;
+}
+
+.login-cap p {
+  font-size: 14px;
+  color: var(--apagat);
+}
+
+.login-cos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-opcions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.recordar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--apagat);
+  cursor: pointer;
+}
+
+.recordar input[type="checkbox"] {
+  accent-color: var(--accent);
+  width: 14px;
+  height: 14px;
+}
+
+.oblidat {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  transition: opacity 0.2s;
+}
+
+.oblidat:hover {
+  opacity: 0.7;
+}
+
+.login-boto {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 15px;
+  padding: 14px;
+}
+
+.login-registre {
+  text-align: center;
+  font-size: 13px;
+  color: var(--apagat);
+}
+
+.login-registre a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.login-registre a:hover {
+  opacity: 0.7;
+}
